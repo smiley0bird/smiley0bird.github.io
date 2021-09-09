@@ -55,3 +55,7 @@
     And enterprises of great pith and moment
     With this regard their currents turn awry
     And lose the name of action.
+
+
+
+## Anyway i hope you're having an amazing day and i want to let you know, that what ever you're doing, as long as you try hard, you will succeed
