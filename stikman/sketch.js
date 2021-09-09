@@ -20,7 +20,7 @@ function draw() {
   
 
   
-   translate(width / 2, height / 5);
+   translate(width / 2, height / 4.5);
   translate(p5.Vector.fromAngle(millis() / 600, 100));
   circle(0, 0, 20);
   
