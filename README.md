@@ -1,6 +1,6 @@
 # smiley0bird.github.io
 
-## Under construction
+#### This is my fkn website or something?!?!?
 
-- [MyStickman](stikman/)
+- [My Stickman](stikman/)
 - [My Cake](Cake/)
