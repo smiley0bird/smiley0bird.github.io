@@ -60,4 +60,4 @@
 
 #### Anyway i hope you're having an amazing day and i want to let you know, that what ever you're doing, as long as you try hard, you will succeed
 
-- ![#1589F0](https://via.placeholder.com/1500/1589F0/000000?text=Anyway i hope you're having an amazing day and i want to let you know, that what ever you're doing, as long as you try hard, you will succeed)
+![#1589F0](https://via.placeholder.com/1500/1589F0/000000?text=Anyway i hope you're having an amazing day and i want to let you know, that what ever you're doing, as long as you try hard, you will succeed)
