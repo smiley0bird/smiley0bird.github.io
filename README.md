@@ -2,5 +2,5 @@
 
 ## Under construction
 
-[MyStickman](stikman/)
-[My Cake](Cake/)
+- [MyStickman](stikman/)
+- [My Cake](Cake/)
