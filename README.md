@@ -1,6 +1,5 @@
-# smiley0bird.github.io
 
-#### This is my fkn website or something?!?!?
+# This webiste was made by me
 
 - [My Stickman](stikman/)
-- [My Cake](Cake/)
+- [My Cake](Cake/Index.html/)
