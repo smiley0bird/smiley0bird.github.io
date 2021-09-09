@@ -1,5 +1,5 @@
 function setup() {
-  createCanvas(1366, 768);
+  createCanvas(600, 450);
 }
 let cam;
 let delta = 0.5;
@@ -20,7 +20,7 @@ function draw() {
   
 
   
-   translate(width / 2, height / 5);
+   translate(width / 5.5, height / 2);
   translate(p5.Vector.fromAngle(millis() / 600, 100));
   circle(0, 0, 20);
   
