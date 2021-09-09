@@ -1,5 +1,4 @@
 # smiley0bird.github.io
-website for cake and stuff
 <!DOCTYPE html>
 <html lang="{{ site.lang | default: "en-US" }}">
   <head>
