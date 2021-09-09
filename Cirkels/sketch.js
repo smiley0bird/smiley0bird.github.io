@@ -1,5 +1,5 @@
 function setup() {
-  createCanvas(400, 400, WEBGL);
+  createCanvas(768, 768, WEBGL);
   detailY = createSlider(50, 1000, 1);
   detailY.position(10, height + 0);
   detailY.style('width', '80px');
