@@ -1,5 +1,5 @@
 function setup() {
-  createCanvas(600, 450);
+  createCanvas(1366, 768);
 }
 let cam;
 let delta = 0.5;
