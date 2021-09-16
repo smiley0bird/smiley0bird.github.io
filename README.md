@@ -3,7 +3,7 @@
 
 - [My Stickman](stikman/)
 - [My Cake](Cake/Index.html/)
-- [Two cirkels](Cirkels/)
+- [Two cirkels](Cirkels/index.html/)
 - [Ball Bouncing](bouncing ball/)
 
 
