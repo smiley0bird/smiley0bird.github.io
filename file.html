@@ -1,0 +1,102 @@
+<div id="container">
+    <div id="roll"></div>
+    <div id="tube1" class="tube"></div>
+    <div id="tube2" class="tube"></div>
+    <div id="tube3" class="tube"></div>
+    <script>      
+      var reqID, dir;    
+      var left = 0;
+      var top = 0;
+      var player, tube, pw, ph, px, py, tw, th, tx, ty;     
+    
+      function detectCollisions() {
+        //Access the current location and dimension of both objects
+        for(let i = 0; i < tube.length; i++)
+        {
+          pw = player.offsetWidth;
+          ph = player.offsetHeight;
+          px = player.offsetLeft;
+          py = player.offsetTop;
+          tw = tube[i].offsetWidth;
+          th = tube[i].offsetHeight;
+          tx = tube[i].offsetLeft;
+          ty = tube[i].offsetTop;
+          console.log(tw);      
+          //check to see if tube has intersected width player in any direction
+    
+          if((px+pw) > tx && px < (tx+tw) && (py+ph) > ty && py < (ty+th)) {
+            //Do anything you want in the program when collision is detected
+            console.log("collision detected with" + tube[i].id);
+            this.player.style.left = (player.offsetLeft -= 3) + 'px';
+            /*document.body.removeChild(tube[i]);*/
+    
+          }        
+        }
+        window.requestAnimationFrame(detectCollisions);
+      }   
+    
+      function stopAnimation() {
+        console.log('stop');
+        /*window.cancelAnimationFrame(reqID);*/
+        player.style.animation = "face-forward 0.9s steps(4) infinite";
+      }
+    
+      function move(e) {
+        console.log(e.keyCode)
+        //up
+        if(e.keyCode == 38) {              
+          player.style.top = (player.offsetTop -= 3) + 'px';
+        } else if(e.keyCode == 39) { //right arrow                
+          player.style.left = (player.offsetLeft += 3) + 'px';
+          player.style.animation = "walk-right 0.9s steps(4) infinite";
+        } else if(e.keyCode == 40) { //down arrow                
+          player.style.top = (player.offsetTop += 3) + 'px';
+        } else if(e.keyCode == 37) { //left arrow                
+          player.style.left = (player.offsetLeft -= 3) + 'px';
+          player.style.animation = "walk-left 0.9s steps(4) infinite";
+        }
+    
+        /*reqID = window.requestAnimationFrame(startAnimation);*/
+      }
+    
+      function createScenario() {
+        var positionLeft = 0;
+        for(let i = 0; i < 40; i++) {
+            let iDiv = document.createElement('div');
+            iDiv.id = 'floor' + i;
+            iDiv.className = 'floor';
+            iDiv.style.left = positionLeft + 'px';
+          iDiv.style.top = 170 + 'px';
+            document.getElementById('container').appendChild(iDiv);
+            positionLeft += 35;     
+        }
+    
+        /*let iDiv = document.createElement('div');
+        iDiv.id = "roll";
+        iDiv.style.zIndex = "5";
+        document.getElementByTagName('body').appendChild(iDiv);*/
+      }
+    
+      /*Setting everything at the beggining*/
+      var spriteSheet = new Image();
+      spriteSheet.src = './resources/king_left_right.png';
+      function docReady() {    
+        /*player = document.createElement("div");
+        player.id = "roll";
+        player.style.backgroundPosition = "background-position: 200px -5px;"
+        player.style.background = "url("+spriteSheet.src+")";
+        document.body.appendChild(player);*/
+        player = document.getElementById('roll');
+        player.style.backgroundPosition = "background-position: 200px -5px;"
+        player.style.background = "url("+spriteSheet.src+")";
+        tube = document.getElementsByClassName("tube");
+        detectCollisions();
+            createScenario();
+      }
+    
+      document.onkeydown = move;
+      document.onkeyup = stopAnimation;
+      window.addEventListener("load", function(event) {
+        docReady();
+      });
+    </script>
