@@ -1,5 +1,7 @@
 let xPos = 320;
 let yPos = 180;
+let xPos2 = 600
+let yPos2 = 10
 let xspeed = 5;
 let yspeed = 2;
 
@@ -11,8 +13,13 @@ function setup() {
 
 function draw() {
   background(100);
-  circle(xPos, yPos, r*3, r*3);
+  circle(xPos, yPos, r * 3, r * 3);
   xPos += xspeed;
   yPos += yspeed;
-
+  if (xPos > width - r || xPos < r) {
+    xspeed = -xspeed;
+  }
+  if (yPos > height - r || yPos < r) {
+    yspeed = -yspeed;
+  }
 }
