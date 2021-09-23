@@ -1,7 +1,5 @@
 let xPos = 320;
 let yPos = 180;
-let xPos2 = 600
-let yPos2 = 10
 let xspeed = 5;
 let yspeed = 2;
 

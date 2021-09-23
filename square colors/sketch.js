@@ -4,6 +4,11 @@ function setup() {
 
 function draw() {
   background(244, 248, 252);
-  line(mouseX, 0, mouseX, 500);
-
+  circle(mouseX, mouseY, 100);
+  if (mouseX > 700 && mouseY > 300){
+    fill(51)
+  }
+  if (mouseX > 700 && mouseY < 300){
+    fill(200)
+  }
 }
