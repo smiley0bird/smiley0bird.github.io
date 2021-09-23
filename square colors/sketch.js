@@ -1,7 +1,9 @@
 function setup() {
-  createCanvas(400, 400);
+  createCanvas(1324.5, 626.5);
 }
 
 function draw() {
-  background(220);
+  background(244, 248, 252);
+  line(mouseX, 0, mouseX, 100);
+
 }
