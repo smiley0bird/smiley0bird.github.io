@@ -6,12 +6,12 @@ let yspeed = 2;
 let r = 10;
 
 function setup() {
-  createCanvas(1320, 626);
+  createCanvas(1324.5, 626.5);
 }
 
 function draw() {
   background(100);
-  ellipse(xPos, yPos, r*3, r*3);
+  circle(xPos, yPos, r*3, r*3);
   xPos += xspeed;
   yPos += yspeed;
   if (xPos > width - r || xPos < r) {
