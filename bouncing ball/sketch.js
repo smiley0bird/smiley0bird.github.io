@@ -14,12 +14,5 @@ function draw() {
   circle(xPos, yPos, r*3, r*3);
   xPos += xspeed;
   yPos += yspeed;
-  if (xPos > width - r || xPos < r) {
-    xspeed = -xspeed;
-  }
-  if (yPos > height - r || yPos < r) {
-    yspeed = -yspeed;
-  }
-
 
 }
