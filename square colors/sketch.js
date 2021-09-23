@@ -4,6 +4,6 @@ function setup() {
 
 function draw() {
   background(244, 248, 252);
-  line(mouseX, 0, mouseX, 100);
+  line(mouseX, 0, mouseX, 500);
 
 }
