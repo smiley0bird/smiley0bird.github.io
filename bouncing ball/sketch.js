@@ -11,7 +11,7 @@ function setup() {
 
 function draw() {
   background(100);
-  circle(xPos, yPos, r * 3, r * 3);
+  circle(xPos, yPos, r * 3);
   xPos += xspeed;
   yPos += yspeed;
   if (xPos > width - r || xPos < r) {
