@@ -5,16 +5,16 @@ function setup() {
 function draw() {
   background(244, 248, 252);
   circle(mouseX, mouseY, 100);
-  if (mouseX > 700 && mouseY > 300){
+  if (mouseX > 662.50 && mouseY > 313.50){
     fill(255)
   }
-  if (mouseX > 700 && mouseY < 300){
+  if (mouseX > 662.50 && mouseY < 313.50){
     fill(255, 0, 0)
   }
-  if (mouseX < 700 && mouseY < 300){
+  if (mouseX < 662.50 && mouseY < 313.50){
     fill(255)
   }
-  if (mouseX < 700 && mouseY > 300){
+  if (mouseX < 662.50 && mouseY > 313.50){
     fill(255, 0, 0)
   }
 }
