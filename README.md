@@ -10,7 +10,7 @@
 
 
 
- Just in case you were bored heres some random facts
+### Just in case you were bored heres some random facts
 
 - People were on the moon before they put wheels on suitcases
 - Harry Potter has been translated into ancient greek
@@ -23,7 +23,7 @@
 
 
 
- You can also read the intire scrip of shakespeare "To be, or not to be" poem
+### You can also read the intire scrip of shakespeare "To be, or not to be" poem
 
 
     To be, or not to be, that is the question: 
