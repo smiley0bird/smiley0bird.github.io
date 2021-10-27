@@ -7,6 +7,7 @@
 - [Ball Bouncing](bouncing ball/index.html/)
 - [Logiske operatorer](square colors/)
 - [Løkker](loekker/)
+- [Drawing](drawing/)
 
 
 

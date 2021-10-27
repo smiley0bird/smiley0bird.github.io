@@ -183,7 +183,7 @@ console.log("    ")
 let x = -1
 
 
-while (x < 10){
+while (x <= 10){
   x = x + 1
   console.log("y=3*x*x+6*x+9")
   console.log(x)
@@ -202,7 +202,7 @@ console.log("    ")
 let x1 = -10
 
 
-while (x1 < 100){
+while (x1 <= 100){
   x1 = x1 + 10
   console.log("y=3*x1*x1+6*x1+9")
   console.log(x1)
