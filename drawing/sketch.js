@@ -4,8 +4,8 @@ function setup() {
 }
 
 function draw() {
-  stroke(0);
   if (mouseIsPressed === true) {
     line(mouseX, mouseY, pmouseX, pmouseY);
   }
 }
+
