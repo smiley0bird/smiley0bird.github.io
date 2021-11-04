@@ -8,16 +8,20 @@ let kast1 = []
 
 var node = [terninger, AntalKastIAlt, sider]
 
+
+// this was a huge failur and didn't work 
+
 //var input;
 
 //function setup() {
 //  noCanvas();
 //  input = createInput();
 //}
-// fucking something i have no idea this fuckign thing is needed tho, i have no clue why tho. stolen from the getsrevel website
+
+
 const args = process.argv.slice(2)
  
-// the next 3 if's define the argurments, the args[0] is the first argurment, [1] is the second, [2] is the third etc
+
 if (1 == args.length) {
     AntalKastIAlt = args[0]
 }
