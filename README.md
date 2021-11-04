@@ -8,6 +8,7 @@
 - [Logiske operatorer](square colors/)
 - [Løkker](loekker/)
 - [Drawing](drawing/)
+- [terninger](throwingstuff/)
 
 
 
