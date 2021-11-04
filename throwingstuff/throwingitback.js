@@ -6,6 +6,8 @@ let terninger = 6
 let abe = 0
 let kast1 = []
 
+
+// idk what it does or if it does anything at all, idk I made it like a week ago and forgot about it
 var node = [terninger, AntalKastIAlt, sider]
 
 
