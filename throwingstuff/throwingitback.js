@@ -41,14 +41,14 @@ if (3 == args.length) {
 
 
 if (AntalKastIAlt == "loads") {
-    AntalKastIAlt = Math.floor(Math.random() * 10000) + 1
+    AntalKastIAlt = Math.floor(Math.random() * 99999999) + 1
 }
 
 if (sider == "loads") {
-    sider = Math.floor(Math.random() * 10000) + 1
+    sider = Math.floor(Math.random() * 99999999) + 1
 }
 if (terninger == "loads") {
-    terninger = Math.floor(Math.random() * 10000) + 1
+    terninger = Math.floor(Math.random() * 99999999) + 1
 }
 
 
