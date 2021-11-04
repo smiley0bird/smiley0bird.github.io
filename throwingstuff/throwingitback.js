@@ -40,20 +40,6 @@ if (3 == args.length) {
 }
 
 
-if (AntalKastIAlt == "loads") {
-    AntalKastIAlt = Math.floor(Math.random() * 99999999) + 1
-}
-
-if (sider == "loads") {
-    sider = Math.floor(Math.random() * 99999999) + 1
-}
-if (terninger == "loads") {
-    terninger = Math.floor(Math.random() * 99999999) + 1
-}
-
-
-
-
   while (AntalKast < AntalKastIAlt) {
 
     abe = 0
