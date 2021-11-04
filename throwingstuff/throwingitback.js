@@ -66,7 +66,8 @@ if (3 == args.length) {
   });
   console.log(counts)
 
-
-
+console.log(AntalKastIAlt)
+console.log(sider)
+console.log(terninger)
 
 
