@@ -5,7 +5,7 @@ function setup() {
 
 function draw() {
   if (mouseIsPressed === true) {
-    line(mouseX, mouseY, pmouseX, pmouseY);
+   line(mouseX, mouseY, pmouseX, pmouseY);
   }
 }
 
