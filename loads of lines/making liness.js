@@ -1,31 +1,3 @@
-let lines = 0
-let LP = 0
-let LPx = 0
-let LPy = 0
-let lx1s = []
-let ly1s = []
-let lx2s = []
-let ly2s = []
-
-
-
-
-function setup() {
-    createCanvas(windowWidth, windowHeight);
-}
-
-
-function keyPressed(){
-    if (key == 'e') {
-        lx1s = []
-        lx2s = []
-        ly1s = []
-        ly2s = []
-
-    }
-
-}
-
 function draw() {
     background(255)
     for (let i = 0; i < lines; i++) {
@@ -53,3 +25,4 @@ function mouseReleased() {
     lx2s.push(mouseX)
     ly2s.push(mouseY)
 }
+

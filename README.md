@@ -9,6 +9,7 @@
 - [Løkker](loekker/)
 - [en linje](one line/)
 - [flere linjer](loads of lines/)
+- [firkanter](making squares/)
 
 
 

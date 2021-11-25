@@ -11,10 +11,6 @@ function setup() {
     createCanvas(windowWidth, windowHeight);
 }
 
-
-
-
-
 function draw() {
     background(255)
     for (let i = 0; i < lines; i++) {
@@ -32,8 +28,6 @@ function mousePressed() {
     x2s = []
     y1s = []
     y2s = []
-
-
     LP = 1
     lines += 1
     LPx = mouseX
