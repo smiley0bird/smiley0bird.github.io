@@ -17,8 +17,6 @@ console.log("    ")
 console.log("    ")
 
 
-// 1+2+3...+20
-
 let loekke20 = 0
 let loekke1 = 0
 
