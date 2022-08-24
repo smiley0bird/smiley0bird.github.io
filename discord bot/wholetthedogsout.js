@@ -1,19 +1,30 @@
-const fetch = require('node-fetch')
-const { Client, Intents } = require("discord.js");
-const Commands = require('./commands');
-const client = new Client({
-  intents: [Intents.FLAGS.GUILDS, Intents.FLAGS.GUILD_MESSAGES]
-});
+import { createRequire } from "module";
+const require = createRequire(import.meta.url);
+
+import { Client, Intents } from 'discord.js';
+
+const config = {
+  intents: [
+    Intents.FLAGS.GUILDS,
+    Intents.FLAGS.GUILD_MESSAGES,
+  ]
+}
+const client = new Client(config);
 
 require('dotenv').config()
 
+const TOKEN = process.env.DISCORD_TOKEN
 
-client.on('ready', () => {
-  console.log(`Logged in as ${client.user.tag}!, you know all of this code...loads of code and still no bitches`);
-});
+console.log("Beep Beep 🤖")
 
+client.on('ready', readyDiscord)
 
-client.on("messageCreate", Commands)
+function readyDiscord() {
+  console.log(`Logged in as ${client.user.tag} 👍!`);
+}
 
+import commandHandler from './commands.js'
 
-client.login(process.env.TOKEN);
+client.on('messageCreate', commandHandler)
+
+client.login(TOKEN);
