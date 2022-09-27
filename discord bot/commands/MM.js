@@ -3,7 +3,7 @@ import fetch from "node-fetch";
 let cwp = [];
 
 let tries = 0;
-let sc = [];
+let sc = []; 
 let somenumber = 0;
 let makesuregameon = 0;
 function codemake() {
@@ -17,6 +17,8 @@ function codemake() {
   tries = 10;
   makesuregameon = 1;
 }
+
+
 
 let cx4 = 0;
 
