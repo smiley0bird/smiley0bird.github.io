@@ -75,11 +75,18 @@ async function processcode(args) {
 }
 
 export default async function (msg, args) {
-  if (args[0] == "s") {
+  if (args[0] == "start") {
     codemake();
     msg.channel.send(
       "What is this? Oh I apologize that you were born into my world, because it seems like you have choosen death, but since I am feeling quite generous, we are playing a game. Everyone likes word games since humans can't live without giving excuses. \n \n I've made a really easy code, guess what the code might be, by typing !mm n n n n an example could be !mm 1 2 3 4 \n If you need more help type !mm help \n Also remember to think before you speak and don't look up without permission. It's unpleasant."
     );
+    cx4 = 0;
+    g = [];
+    sbr = [];
+    sbr1 = [];
+    sbr2 = [];
+    sbr3 = [];
+    sbr4 = []; 
   }
   if (args == "") {
     msg.channel.send(
@@ -88,6 +95,7 @@ export default async function (msg, args) {
     msg.channel.send(
       `https://images.uwufufu.com/6122bdecb7de2f59297d2332/selections/file-1629677499362-971755104.jpg`
     );
+  }
     if (args[0] == "help") {
       msg.channel.send(
         "Ughhhh of course you have no idea how to do anything. Okay you want write something like !mm 1 2 3 4. I am not saying more to such an imputent and foulish mortal like you \n Figure it out or get out of my sight"
@@ -107,7 +115,8 @@ export default async function (msg, args) {
         "  |  " +
         cwp
       );
-    } else if (tries == 0 && makesuregameon == 0) {
+    } 
+    if (tries == 0 && makesuregameon == 0) {
       msg.channel.send(
         "There is clearly something you do not understand, of course standing face to face against greatness of this amount would make anyone tremble. Though I will admit I am quite disapointed"
       );
@@ -117,7 +126,8 @@ export default async function (msg, args) {
       msg.channel.send(
         "if you are simply too stupid to figure it out yourself, you can type !mm help"
       );
-    } else if (tries == 0 && makesuregameon == 1) {
+    }
+    if (tries == 0 && makesuregameon == 1) {
       msg.channel.send(
         "How amusing, it seems I have overestimated the weak. Although you dedicate your pride, future, your everything depends on me, you couldn't even solve an easy puzzle like this, pathetic. Now if you want the code here it is " + sc + ". I do not want you in my sights again"
       );
@@ -135,4 +145,3 @@ export default async function (msg, args) {
       tries = 0;
     }
   }
-}

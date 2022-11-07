@@ -1,0 +1,21 @@
+<html>
+<head>
+    <title>Using innerText</title>
+</head>
+
+<body>
+    <h1 id="lblEmp">N/A</h1>
+    Enter a Name: <input type="text" id="emp" value="" />
+    <p>
+        <input type="button" id="bt" value="Change Header Text" onclick="changeLabel()" />
+    </p>
+</body>
+<script>
+    function changeLabel() {
+        let lbl = document.getElementById('lblEmp');
+        let empName = document.getElementById('emp').value;
+
+        lbl.innerText = empName;       
+    }
+</script>
+</html>
