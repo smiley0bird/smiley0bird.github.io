@@ -11,5 +11,7 @@
 - [flere linjer](loads of lines/)
 - [firkanter](making squares/)
 - [rpg](godot/godot_stuff.html)
+- [DDU](ddufn/DDUFN.html)
+- [SOP](SOP/SOP.html)
 
 
