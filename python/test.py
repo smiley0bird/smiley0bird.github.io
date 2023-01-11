@@ -1,14 +1,33 @@
-def array_diff(a, b):
-    n = 1
-    c = []
-    f = 0
-    if len(a) == 0:
-        return a
-    while n  <= len(a):
-        while a[n-1] != any(b):
-            a[n-1].int(c)
-            f = f +1
-            n = n+1
-        n = n + 1
-        
-array_diff([1,2], [1])
+print("er du ved at dø?")
+if input() == "y":
+    print("seriøst?")
+    if input() == "y" or "yes" or "ja":
+        print("ring 1-1-2")
+    if input() == "n" or "no" or "nej":
+        print("tror du, det er alvorligt?")
+        if input() == "y" or "yes" or "ja":
+            print("syntes du, forkølese er alvorligt?")
+            if input() == "y" or "yes" or "ja":
+                print("ring til mor")
+            if input() == "n" or "no" or "nej":
+                print("er din læge open?")
+                if input() == "y" or "yes" or "ja":
+                    print("Ring til egen læge")
+                if input() == "n" or "no" or "nej":
+                    print("Ring til vagtlægen")
+        if input() == "n" or "no" or "nej":
+            print("ring til din mor")
+if input() == "n" or "no" or "nej":
+    print("tror du, det er alvorligt?")
+    if input() == "y" or "yes" or "ja":
+        print("syntes du, forkølese er alvorligt?")
+        if input() == "y" or "yes" or "ja":
+            print("ring til mor")
+        if input() == "n" or "no" or "nej":
+            print("er din læge open?")
+            if input() == "y" or "yes" or "ja":
+                print("Ring til egen læge")
+            if input() == "n" or "no" or "nej":
+                print("Ring til vagtlægen")
+    if input() == "n" or "no" or "nej":
+              print("ring til din mor")
