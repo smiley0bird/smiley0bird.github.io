@@ -1,33 +1,35 @@
-print("er du ved at dø?")
-if input() == "y":
-    print("seriøst?")
-    if input() == "y" or "yes" or "ja":
+def question(pew):
+    d = 0
+    print(pew)
+    k = input()
+    if k == "y" or k == "yes" or k == "ja":
+        return 1
+    else:
+        return 0
+
+if question("er du ved at dø?"):
+    if question("seriøst?"):
         print("ring 1-1-2")
-    elif input() == "n" or "no" or "nej":
-        print("tror du, det er alvorligt?")
-        if input() == "y" or "yes" or "ja":
-            print("syntes du, forkølese er alvorligt?")
-            if input() == "y" or "yes" or "ja":
+    else:
+        
+        if question("tror du, det er alvorligt?"):
+            if question("syntes du, forkølese er alvorligt?"):
                 print("ring til mor")
-            elif input() == "n" or "no" or "nej":
-                print("er din læge open?")
-                if input() == "y" or "yes" or "ja":
+            else:
+                if question("er din læge open?"):
                     print("Ring til egen læge")
-                elif input() == "n" or "no" or "nej":
+                else:
                     print("Ring til vagtlægen")
-        elif input() == "n" or "no" or "nej":
+        else:
             print("ring til din mor")
-elif input() == "n" or "no" or "nej":
-    print("tror du, det er alvorligt?")
-    if input() == "y" or "yes" or "ja":
-        print("syntes du, forkølese er alvorligt?")
-        if input() == "y" or "yes" or "ja":
+else:
+    if question("tror du, det er alvorligt?"):
+        if question("syntes du, forkølese er alvorligt?"):
             print("ring til mor")
-        elif input() == "n" or "no" or "nej":
-            print("er din læge open?")
-            if input() == "y" or "yes" or "ja":
+        else:
+            if question("er din læge open?"):
                 print("Ring til egen læge")
-            elif input() == "n" or "no" or "nej":
+            else:
                 print("Ring til vagtlægen")
-    elif input() == "n" or "no" or "nej":
-              print("ring til din mor")
+    else:
+        print("ring til din mor")
