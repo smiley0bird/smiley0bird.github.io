@@ -16,10 +16,7 @@ var player : Node2D
 
 func _ready() -> void:
 	tile_map = get_parent() as TileMap
-	clear()
-	generate_square()
-	generate()
-	clear_area()
+	redraw()
 
 
 func clear_area():
@@ -36,6 +33,7 @@ func redraw(value = null) -> void:
 	if tile_map == null:
 		return
 	clear()
+	generate_square()
 	generate()
 	clear_area()
 
@@ -80,3 +78,8 @@ func _set_autotile(x : int, y : int) -> void:
 	)
 	tile_map.update_bitmask_area(Vector2(x, y))
 
+
+onready var text = $"../../UI/TextEdit"
+func _on_Button_pressed():
+	world_seed = text.text
+	redraw()
