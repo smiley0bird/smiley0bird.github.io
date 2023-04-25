@@ -78,8 +78,11 @@ func _set_autotile(x : int, y : int) -> void:
 	)
 	tile_map.update_bitmask_area(Vector2(x, y))
 
-
-onready var text = $"../../UI/TextEdit"
+onready var text = $"../../UI/HSeparator/TextEdit"
+onready var height = $"../../UI/HSeparator/TextEdit4"
+onready var width = $"../../UI/HSeparator/TextEdit5"
 func _on_Button_pressed():
 	world_seed = text.text
+	map_height = height.text
+	map_width = map_width.text
 	redraw()

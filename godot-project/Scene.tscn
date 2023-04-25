@@ -7,6 +7,7 @@
 [node name="Scene" type="Node2D"]
 
 [node name="Background" type="Sprite" parent="."]
+position = Vector2( -2, 0 )
 scale = Vector2( 7.744, 4 )
 texture = ExtResource( 2 )
 region_enabled = true
@@ -19,7 +20,6 @@ cell_custom_transform = Transform2D( 0, 0, 0, 0, 0, 0 )
 format = 1
 
 [node name="CaveGenerator" parent="TileMap" instance=ExtResource( 3 )]
-world_seed = "55"
 noise_octaves = 6
 
 [node name="Camera2D" type="Camera2D" parent="."]
@@ -34,25 +34,39 @@ remote_path = NodePath("../../Background")
 [node name="UI" type="Node" parent="."]
 
 [node name="Button" type="Button" parent="UI"]
-anchor_left = -3.579
-anchor_top = -3.091
-anchor_right = -2.571
-anchor_bottom = -2.076
-margin_left = 5.84033
-margin_top = 103.14
-margin_right = -861.84
-margin_bottom = -418.96
+anchor_left = -3.573
+anchor_top = -2.9
+anchor_right = -2.844
+anchor_bottom = -2.563
+margin_left = 0.0800781
+margin_right = -599.76
+margin_bottom = -155.98
 rect_scale = Vector2( 7, 7 )
 text = "Update"
 
-[node name="TextEdit" type="TextEdit" parent="UI"]
+[node name="HSeparator" type="HSeparator" parent="UI"]
+margin_right = 3.0
+margin_bottom = 4.0
+
+[node name="TextEdit" type="TextEdit" parent="UI/HSeparator"]
 anchor_left = -0.132
-margin_left = -3306.28
-margin_top = -1373.0
-margin_right = -3260.0
-margin_bottom = -1350.0
-rect_scale = Vector2( 7, 7 )
+margin_left = -2741.6
+margin_top = -1370.0
+margin_right = -2649.0
+margin_bottom = -1344.0
+rect_scale = Vector2( 8, 8 )
 text = "Hello Godot!"
 minimap_width = 82
+
+[node name="TextEdit2" type="LineEdit" parent="UI/HSeparator"]
+margin_left = -3430.0
+margin_top = -1374.0
+margin_right = -3345.0
+margin_bottom = -1348.0
+rect_scale = Vector2( 8, 8 )
+text = "World Seed"
+editable = false
+clear_button_enabled = true
+selecting_enabled = false
 
 [connection signal="pressed" from="UI/Button" to="TileMap/CaveGenerator" method="_on_Button_pressed"]
