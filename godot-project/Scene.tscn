@@ -1,15 +1,24 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://assets/TileSet.tres" type="TileSet" id=1]
 [ext_resource path="res://assets/background.png" type="Texture" id=2]
 [ext_resource path="res://CaveGenerator.tscn" type="PackedScene" id=3]
+[ext_resource path="res://build/procedural-caves.apple-touch-icon.png" type="Texture" id=4]
 
 [node name="Scene" type="Node2D"]
 
-[node name="Background" type="Sprite" parent="."]
+[node name="Sprite" type="Sprite" parent="."]
+scale = Vector2( 100, 100 )
 texture = ExtResource( 2 )
-region_enabled = true
-region_rect = Rect2( 0, 0, 1920, 1080 )
+
+[node name="Sprite2" type="Sprite" parent="."]
+scale = Vector2( 0.3, 0.3 )
+texture = ExtResource( 4 )
+
+[node name="Background" type="Sprite" parent="."]
+visible = false
+texture = ExtResource( 2 )
+region_rect = Rect2( 1256, 57, 1, 0 )
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = ExtResource( 1 )
