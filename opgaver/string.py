@@ -23,7 +23,7 @@ def my_function(x):
   return x[::-1]
 
 u = my_function(a)
-if a == u:
+if a ==u:
   print("5. This is a perfect palindrom")
 else:
   print("5. This is not a perfect palindrom")
