@@ -38,6 +38,4 @@ for (let i = 0; i < strings.length; i++) {
     a += strings[i].length
 }
 
-a /= strings.length;
-
-console.log(a);
+console.log(a /= strings.length);
