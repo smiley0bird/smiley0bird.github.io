@@ -60,8 +60,10 @@ function round2Decimals(floatNumber){
 }
 
 function calcBMI(height,weight){
-  //IMPLEMENT ME
-  return 0;
+  
+  let heighttimestwo = (height * height)/10000;
+  let bmi = weight/heighttimestwo;
+  return bmi;
 }
 
 /* "Database" emulated by maintained an in-memory array of BMI Entry objects 
@@ -106,6 +108,15 @@ function calcDelta(name){
 
 //looks up name in bmiDB and returns any found bmiEntry (undefined otherwise)
 function bmiLookup(name){
+
+  let relevantBMIrecord;
+  for(let person in bmiDB){
+    if(person.userName === name){
+      console.log("Found him")
+      relevantBMIrecord = person;
+    }
+  }
+  
  //IMPLEMENT ME
 }
 
@@ -206,8 +217,8 @@ function renderHTMLBMITable(userName){
   </thead>
   <tbody>`
   for(let entry of userEntries) 
-    bmiTable+= `<tr><td> ${entry.weight}</td> <td> ${calcBMI(entry.height,entry.weight)} </td></tr>`
-  bmiTable+=`</tbody></table>`
+    bmiTable+= `<tr><td> ${entry.weight}</td> <td> ${calcBMI(entry.height,entry.weight)} </td></tr> <td>${calcDelta(entry.userName)} </td>`
+  bmiTable+=`</tbody></table><a href="../../nah_fam/help.html>GET HELP</a>`
   return bmiTable;
 }
 
@@ -236,7 +247,7 @@ function renderHTMLHdr(title,csss=[],scripts=[]){
       </head>`;
   return str;
 }
-/* Very simple basic test function with manual check 
+
 function testValidation(){
   let validBMIData=validateBMIFormData({name:"Brian",weight:"90", height:"181"});
   console.log(validBMIData);
@@ -245,5 +256,5 @@ function testValidation(){
   validBMIData=validateBMIFormData({name:"Brian",weight:"90", height:"1812"});
   console.log(validBMIData);
 }
-//BtestValidation();
-*/
+testValidation();
+
