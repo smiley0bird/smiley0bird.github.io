@@ -1,4 +1,4 @@
-#id1 {
+#id1, h1 {
     background-color: aquamarine;
 }
 .myH1 {
@@ -34,10 +34,18 @@ display: block;
     grid-row: auto;
 }
 .myFormLayout>input[type=submit],
-.myFormLayout>input[type=number]{
+.myFormLayout>input[type=number]
+{
     grid-column: controls;
     grid-row: auto;
 }
+.myFormLayout>input[type=radio]
+{
+    grid-column: controls;
+    grid-row: auto;
+    float: left;
+}
+
 .myFormLayout >input[type=text]{
     grid-column: controls / span 2;
     grid-row: auto;
@@ -48,23 +56,30 @@ display: block;
     grid-row: auto;
 }
 */
+
+
+
 #scoretable {
     font-family: Arial, Helvetica, sans-serif;
     border-collapse: collapse;
     border: 2px solid green;;
+    color: black;
 }
-
+#scoretable.greyed {
+  color: lightgray;
+}
 #scoretable td{
     border: 1px solid green;
     padding:6px;
+    height:25px;
   }
-
 
 #scoretable .row-fill {
     background-color:#a1dfa3;
     border: 2px solid green;;
     padding: 8px;
 }  
+
 #scoretable .right-text {
     text-align: right;
 }
@@ -84,4 +99,23 @@ display: block;
     color: green;
     border: 2px solid green;
     padding:6px;
+    margin: 10px;
+    top: 10px;
   }
+  #table_id { 
+    display: inline-block;
+    background-color:burlywood;
+    width:250px;
+    height:70px;
+  }
+/* find column with dices; exemplifies advanced query selector */
+#scoretable>thead>tr:nth-child(2)>th:nth-child(2){
+ min-width: 140px;
+ text-align: center;
+}
+#scoretable>tbody>tr>td:nth-child(2){
+    text-align: right;
+}
+#scoretable>tbody>tr>td:nth-child(1){
+    text-align: right;
+}
