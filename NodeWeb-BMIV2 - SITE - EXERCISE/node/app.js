@@ -54,18 +54,19 @@ function validateBMIRecordForm(bmiData){
 
   console.log("Validating"); console.log(bmiData);
  
-  if(bmiData.has("userName") && bmiData.has("weight") && bmiData.has("height")){
-    let userName=String(bmiData.get("userName"));
-    userName=validateUserName(userName);
-    let weight=parseInt(bmiData.get("weight"));
-    let height=parseInt(bmiData.get("height"));
+  if (bmiData.has("userName") && bmiData.has("weight") && bmiData.has("height") && bmiData.has("age") && bmiData.has("sex")) {
+    let userName = String(bmiData.get("userName"));
+    userName = validateUserName(userName);
+    let weight = parseInt(bmiData.get("weight"));
+    let height = parseInt(bmiData.get("height"));
+    let age = parseInt(bmiData.get("age"));
+    let sex = String(bmiData.get("sex"));
   
-    if((minHeight <= height) && (height <= maxHeight) &&
-    (minWeight <= weight) && (weight <=maxWeight)) {
+    if ((minHeight <= height) && (height <= maxHeight) && (minWeight <= weight) && (weight <= maxWeight) && (minAge <= age) && (age <= maxAge) && (sex === femaleSex || sex === maleSex || sex === indifferentSex)) {
         //return a fresh object with ONLY the validated fields
-        let validBMIData={userName: userName, height: height, weight: weight};
-        console.log("Validated: "); console.log(validBMIData);
-        return validBMIData;
+        let validBMIData = { userName: userName, height: height, weight: weight, age: age, sex: sex };
+      console.log("Validated: "); console.log(validBMIData);
+      return validBMIData;
      }
     } 
   throw(new Error(ValidationError));
@@ -153,6 +154,7 @@ function recordBMI(bmiData){
   bmiStatus.userName=bmiData.userName;
   bmiStatus.bmi=calcBMI(bmiData.height, bmiData.weight);
   bmiStatus.delta=calcDelta(bmiData.userName);
+
   console.log(bmiStatus);
   return bmiStatus;
 }
@@ -176,10 +178,18 @@ function renderHTMLBMIUpdatePage(bmiStatus){
   let page=renderHTMLHdr("BMI Status",["/css/simple.css"]);
   page+=`<body><section>
   <h1> BMI Status of ${bmiStatus.userName} </h1>
+  <nav>
+    <a href="/">Back to the front page</a> |
+    <a href="/html/help.html">Get Help</a> |
+    <a href="/html/search.html">Search BMI</a>
+  </nav>
+
   <output>
     Your BMI is ${bmiStatus.bmi}. Since last, it has changed ${bmiStatus.delta}. 
   </output>
 
+  <a href="/html/help.html">get help</a>
+  <a href="/">Back to Front Page</a>
   </section></body>`;
  return page;
 }
@@ -192,8 +202,13 @@ function renderHTMLBMIStatPage(validBMIStatData){
   const userName=validBMIStatData.userName;
   let page=renderHTMLHdr(`BMI Statistics for user ${userName}`,["/css/simple.css"]);
   page+=`<body><section>
+  <nav>
+    <a href="/">Back to the front page</a> |
+    <a href="/html/help.html">Get Help</a> |
+    <a href="/html/search.html">Search BMI</a>
+  </nav>
+  <br>
   ${renderHTMLBMITable(userName)}
-  
   </section></body>`
   return page;
 }

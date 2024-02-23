@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>IWP Health App</title>
+    <link rel="stylesheet" type="text/css" href="../css/simple.css">
+</head>
+<body>
+
+
+
+  
+
+
+<section> 
+  <h1 id="id2"> IWP BMI-Statistics-tracker</h1>
+  <nav>
+    <a href="/">Back to the front page</a> |
+    <a href="/html/help.html">Get Help</a> |
+    <a href="/html/search.html">Search BMI</a>
+  </nav>
+  <br>
+  <form id="bmiStausForm_id"  action="../bmi-records" method="get"> 
+    <fieldset>
+      <legend>Personal information:</legend>
+      <div class="myFormLayout"> <!-- Hmm, fieldset seems not too happy to work with grid layout used for the form??-->
+      <label for="tracker_name_id"> Name</label>
+      <input type="text"  name="userName" id="tracker_name_id" value="Mickey" required minlength="1" maxlength="30"> 
+  <input type="submit" id="submitTracker_id" value="Get Stats">
+</div>
+ </fieldset> 
+</form>
+</section>
+
+
+</body>
+</html>
+
